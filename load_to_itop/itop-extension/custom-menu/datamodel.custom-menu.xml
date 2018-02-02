@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <constants/>
+    <classes/>
+    <menus>
+        <menu _delta="must_exist" id="ConfigManagementOverview" xsi:type="DashboardMenuNode">
+            <definition>
+                <cells>
+                    <cell _delta="delete" id="3"/>
+                    <cell _delta="delete" id="2"/>
+                    <cell _delta="define" id="5">
+                        <rank>2</rank>
+                        <dashlets>
+                            <dashlet id="100" xsi:type="DashletHeaderStatic">
+                                <rank>0</rank>
+                                <title>Menu:ConfigManagement:Middlewares</title>
+                                <icon>itop-config-mgmt/images/application.png</icon>
+                            </dashlet>
+                            <dashlet _delta="define" id="101" xsi:type="DashletBadge">
+                                <rank>1</rank>
+                                <class>WebServer</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="102" xsi:type="DashletBadge">
+                                <rank>2</rank>
+                                <class>WebApplication</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="103" xsi:type="DashletBadge">
+                                <rank>3</rank>
+                                <class>NginxInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="104" xsi:type="DashletBadge">
+                                <rank>4</rank>
+                                <class>OHSInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="105" xsi:type="DashletBadge">
+                                <rank>5</rank>
+                                <class>SpotfireWebInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="106" xsi:type="DashletBadge">
+                                <rank>6</rank>
+                                <class>Middleware</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="107" xsi:type="DashletBadge">
+                                <rank>7</rank>
+                                <class>MiddlewareInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="108" xsi:type="DashletBadge">
+                                <rank>8</rank>
+                                <class>BWInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="109" xsi:type="DashletBadge">
+                                <rank>9</rank>
+                                <class>OC4JInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="110" xsi:type="DashletBadge">
+                                <rank>10</rank>
+                                <class>SolrInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="111" xsi:type="DashletBadge">
+                                <rank>11</rank>
+                                <class>WeblogicInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="112" xsi:type="DashletBadge">
+                                <rank>12</rank>
+                                <class>SpotfireInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="113" xsi:type="DashletBadge">
+                                <rank>13</rank>
+                                <class>GFSInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="114" xsi:type="DashletBadge">
+                                <rank>14</rank>
+                                <class>ZooKeeperInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="115" xsi:type="DashletBadge">
+                                <rank>15</rank>
+                                <class>EMSInstance</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+                    <cell _delta="define" id="6">
+                        <rank>3</rank>
+                        <dashlets>
+                            <dashlet id="116" xsi:type="DashletHeaderStatic">
+                                <rank>0</rank>
+                                <title>Menu:ConfigManagement:Databases</title>
+                                <icon>itop-config-mgmt/images/application.png</icon>
+                            </dashlet>
+                            <dashlet _delta="define" id="117" xsi:type="DashletBadge">
+                                <rank>1</rank>
+                                <class>DBServer</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="118" xsi:type="DashletBadge">
+                                <rank>2</rank>
+                                <class>DatabaseSchema</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="119" xsi:type="DashletBadge">
+                                <rank>3</rank>
+                                <class>OracleDBInstance</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="120" xsi:type="DashletBadge">
+                                <rank>4</rank>
+                                <class>MongoDBInstance</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+                    <cell _delta="must_exist" id="4">
+                        <rank>4</rank>
+                        <dashlets>
+                            <dashlet _delta="define" id="121" xsi:type="DashletBadge">
+                                <rank>100</rank>
+                                <class>PCSoftware</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="122" xsi:type="DashletBadge">
+                                <rank>101</rank>
+                                <class>OtherSoftware</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="123" xsi:type="DashletBadge">
+                                <rank>102</rank>
+                                <class>Patch</class>
+                            </dashlet>
+                            <dashlet _delta="define" id="124" xsi:type="DashletBadge">
+                                <rank>103</rank>
+                                <class>Licence</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+
+                </cells>
+            </definition>
+        </menu>
+    </menus>
+    <user_rights>
+        <groups/>
+        <profiles/>
+    </user_rights>
+</itop_design>

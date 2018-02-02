@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <constants>
+  </constants>
+  <classes>
+    <class id="PhysicalServer" _delta="define">
+      <parent>Server</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>physicalserver</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <format>%1$s</format>
+          <attributes>
+            <attribute id="name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/PhysicalServer.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+        <field id="env_purpose" xsi:type="AttributeString" _delta="define">
+          <sql>env_purpose</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="env_id" xsi:type="AttributeExternalKey" _delta="define">
+          <sql>env_id</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+          <on_target_delete>DEL_MANUAL</on_target_delete>
+          <target_class>Environment</target_class>
+        </field>
+        <field id="rack_location" xsi:type="AttributeString" _delta="define">
+          <sql>rack_location</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ip" xsi:type="AttributeString" _delta="define">
+          <sql>ip</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="system_disk" xsi:type="AttributeString" _delta="define">
+          <sql>system_disk</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="maint_vendor" xsi:type="AttributeString" _delta="define">
+          <sql>maint_vendor</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="server_type" xsi:type="AttributeString" _delta="define">
+          <sql>server_type</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="power_status" xsi:type="AttributeString" _delta="define">
+          <sql>power_status</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="os_service_pack" xsi:type="AttributeString" _delta="define">
+          <sql>os_service_pack</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="server_function" xsi:type="AttributeString" _delta="define">
+          <sql>server_function</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="cpu_type" xsi:type="AttributeString" _delta="define">
+          <sql>cpu_type</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="cpu_speed" xsi:type="AttributeString" _delta="define">
+          <sql>cpu_speed</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="cpu_num" xsi:type="AttributeString" _delta="define">
+          <sql>cpu_num</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="cpu_core" xsi:type="AttributeString" _delta="define">
+          <sql>cpu_core</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="cpu_cache_size" xsi:type="AttributeString" _delta="define">
+          <sql>cpu_cache_size</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="memory" xsi:type="AttributeString" _delta="define">
+          <sql>memory</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="external_disk" xsi:type="AttributeString" _delta="define">
+          <sql>external_disk</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="power_port" xsi:type="AttributeString" _delta="define">
+          <sql>power_port</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="lan_port" xsi:type="AttributeString" _delta="define">
+          <sql>lan_port</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="fiber_port" xsi:type="AttributeString" _delta="define">
+          <sql>fiber_port</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="fiber_card_model" xsi:type="AttributeString" _delta="define">
+          <sql>fiber_card_model</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="fiber_card_num" xsi:type="AttributeString" _delta="define">
+          <sql>fiber_card_num</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="fiber_card2_model" xsi:type="AttributeString" _delta="define">
+          <sql>fiber_card2_model</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="fiber_card3_model" xsi:type="AttributeString" _delta="define">
+          <sql>fiber_card3_model</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="maint_status" xsi:type="AttributeString" _delta="define">
+          <sql>maint_status</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="maint_service_from" xsi:type="AttributeString" _delta="define">
+          <sql>maint_service_from</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="maint_service_to" xsi:type="AttributeString" _delta="define">
+          <sql>maint_service_to</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="hw_model_eol_date" xsi:type="AttributeString" _delta="define">
+          <sql>hw_model_eol_date</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="check_date" xsi:type="AttributeString" _delta="define">
+          <sql>check_date</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="check_by" xsi:type="AttributeString" _delta="define">
+          <sql>check_by</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+      <methods></methods> 
+        <presentation>
+        <details _delta="redefine">
+          <items>
+            <item id="softwares_list">
+              <rank>10</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>20</rank>
+            </item>
+            <item id="documents_list">
+              <rank>30</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>40</rank>
+            </item>
+            <item id="physicalinterface_list">
+              <rank>50</rank>
+            </item>
+            <item id="fiberinterfacelist_list">
+              <rank>60</rank>
+            </item>
+            <item id="networkdevice_list">
+              <rank>70</rank>
+            </item>
+            <item id="san_list">
+              <rank>80</rank>
+            </item>
+            <item id="logicalvolumes_list">
+              <rank>90</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>100</rank>
+            </item>
+            <item id="services_list">
+              <rank>110</rank>
+            </item>
+            <item id="col:col1">
+              <rank>120</rank>
+              <items>
+                <item id="fieldset:Server:baseinfo">
+                  <rank>10</rank>
+                  <items>
+                    <item id="name">
+                      <rank>10</rank>
+                    </item>
+                    <item id="org_id">
+                      <rank>20</rank>
+                    </item>
+                    <item id="env_id">
+                      <rank>30</rank>
+                    </item>
+                    <item id="env_purpose">
+                      <rank>40</rank>
+                    </item>
+                    <item id="location_id">
+                      <rank>50</rank>
+                    </item>
+                    <item id="rack_location">
+                      <rank>60</rank>
+                    </item>
+                    <item id="server_type">
+                      <rank>70</rank>
+                    </item>
+                    <item id="server_function">
+                      <rank>80</rank>
+                    </item>
+                  </items>
+                </item>
+                <item id="fieldset:Server:moreinfo">
+                  <rank>20</rank>
+                  <items>
+                    <item id="brand_id">
+                      <rank>10</rank>
+                    </item>
+                    <item id="model_id">
+                      <rank>20</rank>
+                    </item>
+                    <item id="osfamily_id">
+                      <rank>30</rank>
+                    </item>
+                    <item id="osversion_id">
+                      <rank>40</rank>
+                    </item>
+                    <item id="os_service_pack">
+                      <rank>50</rank>
+                    </item>
+                    <item id="ip">
+                      <rank>60</rank>
+                    </item>
+                    <item id="cpu_type">
+                      <rank>70</rank>
+                    </item>
+                    <item id="cpu_speed">
+                      <rank>80</rank>
+                    </item>
+                    <item id="cpu_num">
+                      <rank>90</rank>
+                    </item>
+                    <item id="cpu_core">
+                      <rank>100</rank>
+                    </item>
+                    <item id="cpu_cache_size">
+                      <rank>110</rank>
+                    </item>
+                    <item id="memory">
+                      <rank>120</rank>
+                    </item>
+                    <item id="system_disk">
+                      <rank>130</rank>
+                    </item>
+                    <item id="external_disk">
+                      <rank>140</rank>
+                    </item>
+                    <item id="serialnumber">
+                      <rank>150</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+            <item id="col:col2">
+              <rank>130</rank>
+              <items>
+                <item id="fieldset:Server:Date">
+                  <rank>10</rank>
+                  <items>
+                    <item id="maint_status">
+                      <rank>10</rank>
+                    </item>
+                    <item id="maint_service_from">
+                      <rank>20</rank>
+                    </item>
+                    <item id="maint_service_to">
+                      <rank>30</rank>
+                    </item>
+                    <item id="maint_vendor">
+                      <rank>40</rank>
+                    </item>
+                    <item id="hw_model_eol_date">
+                      <rank>50</rank>
+                    </item>
+                    <item id="check_date">
+                      <rank>60</rank>
+                    </item>
+                    <item id="check_by">
+                      <rank>70</rank>
+                    </item>
+                  </items>
+                </item>
+                <item id="fieldset:Server:power">
+                  <rank>20</rank>
+                  <items>
+                    <item id="power_status">
+                      <rank>10</rank>
+                    </item>
+                    <item id="redundancy">
+                      <rank>20</rank>
+                    </item>
+                  </items>
+                </item>
+                <item id="fieldset:Server:otherinfo">
+                  <rank>30</rank>
+                  <items>
+                    <item id="description">
+                      <rank>10</rank>
+                    </item>
+                    <item id="power_port">
+                      <rank>20</rank>
+                    </item>
+                    <item id="lan_port">
+                      <rank>30</rank>
+                    </item>
+                    <item id="fiber_port">
+                      <rank>40</rank>
+                    </item>
+                    <item id="fiber_card_model">
+                      <rank>50</rank>
+                    </item>
+                    <item id="fiber_card_num">
+                      <rank>60</rank>
+                    </item>
+                    <item id="fiber_card2_model">
+                      <rank>70</rank>
+                    </item>
+                    <item id="fiber_card3_model">
+                      <rank>80</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+          </items>
+        </details>
+        <search>
+            <items>
+                     <item id="name">
+                       <rank>10</rank>
+                     </item>
+                     <item id="org_id">
+                       <rank>20</rank>
+                     </item>
+                     <item id="brand_id">
+                       <rank>10</rank>
+                     </item>
+                     <item id="model_id">
+                       <rank>20</rank>
+                     </item>
+                     <item id="osfamily_id">
+                       <rank>30</rank>
+                     </item>
+                     <item id="osversion_id">
+                       <rank>40</rank>
+                     </item> 
+                     <item id="env_purpose">
+                       <rank>50</rank>
+                     </item>
+                     <item id="env_id">
+                       <rank>60</rank>
+                     </item>
+            </items>
+        </search>
+        <list>
+             <items>
+                      <item id="name">
+                        <rank>10</rank>
+                      </item>
+                      <item id="org_id">
+                        <rank>20</rank>
+                      </item>
+                      <item id="env_id">
+                        <rank>30</rank>
+                     </item>
+                     <item id="location_id">
+                       <rank>31</rank>
+                     </item>
+                      <item id="brand_id">
+                        <rank>40</rank>
+                      </item>
+                      <item id="model_id">
+                        <rank>50</rank>
+                      </item>
+                      <item id="osfamily_id">
+                        <rank>60</rank>
+                      </item>
+                      <item id="osversion_id">
+                        <rank>70</rank>
+                      </item>
+                     <item id="cpu_num">
+                       <rank>80</rank>
+                     </item>
+                     <item id="cpu_core">
+                       <rank>90</rank>
+                     </item>
+                     <item id="memory">
+                       <rank>100</rank>
+                     </item>
+                     <item id="serialnumber">
+                       <rank>110</rank>
+                     </item>
+            </items>
+        </list>
+        </presentation>
+     </class>
+  </classes>
+  <menus>
+  <menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+  <definition>
+    <cells>
+      <cell id="0" _delta="must_exist">
+        <dashlets>
+          <dashlet id="100" xsi:type="DashletBadge" _delta="define">
+            <rank>1</rank>
+            <class>PhysicalServer</class>
+         </dashlet>
+       </dashlets>
+     </cell>
+   </cells>
+  </definition>
+  </menu>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>

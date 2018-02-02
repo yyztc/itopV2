@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <constants>
+  </constants>
+  <classes>
+<class id="StorageSystem">
+<fields>
+<field id="env_id" xsi:type="AttributeExternalKey" _delta="define">
+<sql>env_id</sql>
+<default_value/>
+<is_null_allowed>true</is_null_allowed>
+           <on_target_delete>DEL_MANUAL</on_target_delete>
+           <target_class>Environment</target_class>
+         </field>
+         <field id="rack_location" xsi:type="AttributeString" _delta="define">
+           <sql>rack_location</sql>
+           <default_value/>
+           <is_null_allowed>true</is_null_allowed>
+         </field>
+         <field id="type" xsi:type="AttributeString" _delta="define">
+           <sql>type</sql>
+           <default_value/>
+           <is_null_allowed>true</is_null_allowed>
+         </field>
+         <field id="power_status" xsi:type="AttributeString" _delta="define">
+           <sql>power_status</sql>
+           <default_value/>
+           <is_null_allowed>true</is_null_allowed>
+         </field>
+</fields>
+       <presentation>
+         <details _delta="redefine">
+           <items>
+             <item id="contacts_list">
+               <rank>10</rank>
+             </item>
+             <item id="documents_list">
+               <rank>20</rank>
+             </item>
+             <item id="applicationsolution_list">
+               <rank>35</rank>
+             </item>
+             <item id="physicalinterface_list">
+               <rank>40</rank>
+             </item>
+             <item id="fiberinterfacelist_list">
+               <rank>50</rank>
+             </item>
+             <item id="networkdevice_list">
+               <rank>60</rank>
+             </item>
+             <item id="logicalvolume_list">
+               <rank>70</rank>
+             </item>
+             <item id="san_list">
+               <rank>80</rank>
+             </item>
+             <item id="providercontracts_list">
+               <rank>90</rank>
+             </item>
+             <item id="services_list">
+               <rank>100</rank>
+             </item>
+             <item id="col:col1">
+               <rank>110</rank>
+               <items>
+                 <item id="fieldset:Server:baseinfo">
+                   <rank>10</rank>
+                   <items>
+                     <item id="name">
+                       <rank>10</rank>
+                     </item>
+                     <item id="org_id">
+                       <rank>20</rank>
+                     </item>
+                     <item id="env_id">
+                       <rank>21</rank>
+                     </item>
+                     <item id="status">
+                       <rank>30</rank>
+                     </item>
+                     <item id="business_criticity">
+                       <rank>40</rank>
+                     </item>
+                     <item id="location_id">
+                       <rank>50</rank>
+                     </item>
+                     <item id="rack_location">
+                       <rank>51</rank>
+                     </item>
+                     <item id="type">
+                       <rank>52</rank>
+                     </item>
+                     <item id="power_status">
+                       <rank>53</rank>
+                     </item>
+                     <item id="rack_id">
+                       <rank>60</rank>
+                     </item>
+                     <item id="enclosure_id">
+                       <rank>70</rank>
+                     </item>
+                   </items>
+                 </item>
+                 <item id="fieldset:Server:moreinfo">
+                   <rank>20</rank>
+                   <items>
+                     <item id="brand_id">
+                       <rank>10</rank>
+                     </item>
+                     <item id="model_id">
+                       <rank>20</rank>
+                     </item>
+                     <item id="managementip">
+                       <rank>25</rank>
+                     </item>
+                     <item id="nb_u">
+                       <rank>30</rank>
+                     </item>
+                     <item id="serialnumber">
+                       <rank>40</rank>
+                     </item>
+                     <item id="asset_number">
+                       <rank>50</rank>
+                     </item>
+                   </items>
+                 </item>
+               </items>
+             </item>
+             <item id="col:col2">
+               <rank>120</rank>
+               <items>
+                 <item id="fieldset:Server:Date">
+                   <rank>10</rank>
+                   <items>
+                     <item id="move2production">
+                       <rank>10</rank>
+                     </item>
+                     <item id="purchase_date">
+                       <rank>20</rank>
+                     </item>
+                     <item id="end_of_warranty">
+                       <rank>30</rank>
+                     </item>
+                   </items>
+                 </item>
+                 <item id="fieldset:Server:power">
+                   <rank>20</rank>
+                   <items>
+                     <item id="powerA_id">
+                       <rank>10</rank>
+                     </item>
+                     <item id="powerB_id">
+                       <rank>20</rank>
+                     </item>
+                     <item id="redundancy">
+                       <rank>30</rank>
+                     </item>
+                   </items>
+                 </item>
+                 <item id="fieldset:Server:otherinfo">
+                   <rank>30</rank>
+                   <items>
+                     <item id="description">
+                       <rank>10</rank>
+                     </item>
+                   </items>
+                 </item>
+               </items>
+             </item>
+           </items>
+         </details>
+         <search>
+           <items>
+             <item id="name">
+               <rank>10</rank>
+             </item>
+             <item id="org_id">
+               <rank>20</rank>
+             </item>
+             <item id="env_id">
+                <rank>21</rank>
+             </item>
+             <item id="status">
+               <rank>30</rank>
+             </item>
+             <item id="business_criticity">
+               <rank>40</rank>
+             </item>
+             <item id="location_id">
+               <rank>50</rank>
+             </item>
+             <item id="rack_location">
+               <rank>51</rank>
+             </item>
+             <item id="type">
+               <rank>52</rank>
+             </item>
+             <item id="power_status">
+               <rank>53</rank>
+             </item>
+             <item id="brand_id">
+               <rank>60</rank>
+             </item>
+             <item id="model_id">
+               <rank>70</rank>
+             </item>
+             <item id="managementip">
+               <rank>75</rank>
+             </item>
+             <item id="serialnumber">
+               <rank>80</rank>
+             </item>
+             <item id="asset_number">
+               <rank>90</rank>
+             </item>
+             <item id="powerA_id">
+               <rank>100</rank>
+             </item>
+             <item id="powerB_id">
+               <rank>110</rank>
+             </item>
+             <item id="move2production">
+               <rank>120</rank>
+             </item>
+             <item id="purchase_date">
+               <rank>130</rank>
+             </item>
+             <item id="end_of_warranty">
+               <rank>140</rank>
+             </item>
+           </items>
+         </search>
+         <list>
+           <items>
+             <item id="org_id">
+               <rank>10</rank>
+             </item>
+             <item id="status">
+               <rank>20</rank>
+             </item>
+             <item id="env_id">
+               <rank>21</rank>
+             </item>
+             <item id="business_criticity">
+               <rank>30</rank>
+             </item>
+             <item id="location_id">
+               <rank>40</rank>
+             </item>
+             <item id="brand_id">
+               <rank>50</rank>
+             </item>
+             <item id="rack_location">
+               <rank>51</rank>
+             </item>
+             <item id="type">
+               <rank>52</rank>
+             </item>
+             <item id="power_status">
+               <rank>53</rank>
+             </item>
+             <item id="model_id">
+               <rank>60</rank>
+             </item>
+             <item id="serialnumber">
+               <rank>70</rank>
+             </item>
+           </items>
+         </list>
+       </presentation>
+</class>
+  </classes>
+  <menus>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>

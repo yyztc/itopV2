@@ -1,0 +1,3 @@
+./load_to_itop/scripts/config.py
+./extract_to_csv/config.ini
+./load_to_itop/csvfile

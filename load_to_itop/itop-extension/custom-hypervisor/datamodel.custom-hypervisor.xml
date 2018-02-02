@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <constants>
+  </constants>
+  <classes>
+ <class id="Hypervisor">
+      <fields>
+         <field id="env_id" xsi:type="AttributeExternalKey" _delta="define">
+           <sql>env_id</sql>
+           <default_value/>
+           <is_null_allowed>true</is_null_allowed>
+           <on_target_delete>DEL_MANUAL</on_target_delete>
+           <target_class>Environment</target_class>
+         </field>
+      </fields>
+      <presentation>
+        <details _delta="redefine">
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="env_id">
+              <rank>22</rank>
+            </item>
+<!--             <item id="status">
+              <rank>25</rank>
+            </item> -->
+            <item id="server_id">
+              <rank>30</rank>
+            </item>
+            <item id="farm_id">
+              <rank>40</rank>
+            </item>
+<!--             <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item> -->
+            <item id="description">
+              <rank>70</rank>
+            </item>
+<!--             <item id="contacts_list">
+              <rank>80</rank>
+            </item>
+            <item id="documents_list">
+              <rank>90</rank>
+            </item> -->
+            <item id="applicationsolution_list">
+              <rank>110</rank>
+            </item>
+            <item id="logicalvolumes_list">
+              <rank>115</rank>
+            </item>
+            <item id="virtualmachine_list">
+              <rank>120</rank>
+            </item>
+<!--             <item id="providercontracts_list">
+              <rank>130</rank>
+            </item> -->
+            <item id="services_list">
+              <rank>140</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="env_id">
+              <rank>22</rank>
+            </item>
+<!--             <item id="business_criticity">
+              <rank>30</rank>
+            </item>
+            <item id="move2production">
+              <rank>40</rank>
+            </item> -->
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="server_id">
+              <rank>20</rank>
+            </item>
+            <item id="env_id">
+              <rank>22</rank>
+            </item>
+            <item id="farm_id">
+              <rank>30</rank>
+            </item>
+<!--             <item id="business_criticity">
+              <rank>40</rank>
+            </item>
+            <item id="move2production">
+              <rank>50</rank>
+            </item> -->
+          </items>
+        </list>
+      </presentation>
+     </class>
+  </classes>
+  <menus>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>

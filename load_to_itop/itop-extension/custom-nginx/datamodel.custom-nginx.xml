@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <constants>
+  </constants>
+  <classes>
+    <class id="NginxInstance" _delta="define">
+      <parent>WebApplication</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>nginxinstance</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <format>%1$s</format>
+          <attributes>
+            <attribute id="name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/NginxInstance.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+        <field id="environment" xsi:type="AttributeString" _delta="define">
+          <sql>environment</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="port" xsi:type="AttributeString" _delta="define">
+          <sql>port</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+      <methods/>    
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="webserver_id">
+              <rank>30</rank>
+            </item>
+            <item id="url">
+              <rank>40</rank>
+            </item>
+            <item id="environment">
+              <rank>41</rank>
+            </item>
+            <item id="port">
+              <rank>42</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+            <item id="description">
+              <rank>70</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>80</rank>
+            </item>
+            <item id="documents_list">
+              <rank>90</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>110</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>120</rank>
+            </item>
+            <item id="services_list">
+              <rank>130</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>30</rank>
+            </item>
+            <item id="move2production">
+              <rank>40</rank>
+            </item>
+            <item id="environment">
+              <rank>41</rank>
+            </item>
+            <item id="port">
+              <rank>42</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="move2production">
+              <rank>30</rank>
+            </item>
+            <item id="environment">
+              <rank>41</rank>
+            </item>
+            <item id="port">
+              <rank>42</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+     </class>
+  </classes>
+  <menus>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>
