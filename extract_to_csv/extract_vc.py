@@ -10,7 +10,8 @@ import time
 import json_to_csv as jc
 
 BASE_DIR = os.path.dirname(__file__)
-DUMP_DIR = os.path.join(BASE_DIR,'dump')
+DUMP_DIR = "/itop_data/docker_data/apps/itopV2/load_to_itop/csvfile/source"
+# DUMP_DIR = os.path.join(BASE_DIR,'dump')
 CONFIG_FILE = os.path.join(BASE_DIR,'config.ini')
 fileConfig('logger_config.ini')
 logger = logging.getLogger('infoLogger')
@@ -38,7 +39,8 @@ def extract_data(host, user, passwd, port):
 
 def gen_filename(object_name,data_src):
     opt_time = time.strftime('%Y%m%d',time.localtime(time.time()))
-    filename = "%s_%s_%s.json" % (object_name, data_src, opt_time)
+    # filename = "%s_%s_%s.json" % (object_name, data_src, opt_time)
+    filename = "%s_%s.json" % (object_name, data_src)
     return filename
 
 
@@ -92,4 +94,5 @@ if __name__ == '__main__':
             json_filename = gen_filename(object_name=object_name,data_src = args.host)
             to_json(data=data, filename=json_filename)
             jc.convert_json_to_csv(json_filepath=os.path.join(DUMP_DIR,json_filename))
-            ftp_upload(filename=os.path.splitext(json_filename)[0] + '.csv')
+            #ftp_upload(filename=os.path.splitext(json_filename)[0] + '.csv')
+
