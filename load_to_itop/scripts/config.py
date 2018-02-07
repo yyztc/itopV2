@@ -9,8 +9,15 @@ DUMPDIR = os.path.join(CSVDIR, 'dump')
 
 
 # source csv file
-server_src_csv = os.path.join(SRCDIR, 'server_list_vc06_20180115.csv')
-vm_src_csv = os.path.join(SRCDIR, 'vm_list_vc06_20180115.csv')
+server_src_csv = os.path.join(SRCDIR, 'server_list.csv')
+server_src_csv_vc06 = os.path.join(SRCDIR, 'server_list_vc06.csv')
+server_src_csv_vc02 = os.path.join(SRCDIR, 'server_list_vc02.csv')
+server_src_csv_ppvc06 = os.path.join(SRCDIR, 'server_list_ppvc06.csv')
+
+vm_src_csv = os.path.join(SRCDIR, 'vm_list.csv')
+vm_src_csv_vc06 = os.path.join(SRCDIR, 'vm_list_vc06.csv')
+vm_src_csv_vc02 = os.path.join(SRCDIR, 'vm_list_vc02.csv')
+vm_src_csv_ppvc06 = os.path.join(SRCDIR, 'vm_list_ppvc06.csv')
 
 
 # static csv file
@@ -32,9 +39,11 @@ hypervisor_csv = os.path.join(DUMPDIR, 'hypervisor.csv')
 
 # container setting
 IMAGE_NAME="vbkunin/itop:2.3.4"
-CON_NAME = "itop4"
+CON_NAME = "itop0202"
+# CON_NAME = "itop4"
 
-HTTP_PORT = "8780"
+HTTP_PORT = "80"
+# HTTP_PORT = "8780"
 MYSQL_PORT = "3319"
 HTTP_PORT_MAP = "%s:%s" % (HTTP_PORT,'80')
 MYSQL_PORT_MAP = "%s:%s" % (MYSQL_PORT,'3306')
@@ -57,7 +66,7 @@ ITOP_PASS="Password1"
 
 # itop sync data source config
 models = (
-#'Organization',
+# 'Organization',
 'Environment',
 'Location',
 'Brand',
