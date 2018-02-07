@@ -2,12 +2,20 @@ from config import CON_NAME,CON_IMP_SCRIPT
 import batch_delete_all
 import time
 import subprocess
+from urllib.error import HTTPError
 
-restart_con= "docker restart %s" % CON_NAME
-ifexists_con="docker ps | grep %s | wc -l" % CON_NAME
-run_imp_script="docker exec %s sh %s" % (CON_NAME,CON_IMP_SCRIPT)
+restart_con= "sudo docker restart %s" % CON_NAME
+ifexists_con="sudo docker ps | grep %s | wc -l" % CON_NAME
+run_imp_script="sudo docker exec %s sh %s" % (CON_NAME,CON_IMP_SCRIPT)
 
-batch_delete_all.main(show=True)
+def batch_delete():
+    try:
+        batch_delete_all.main(show=True)
+    except HTTPError:
+        batch_delete()
+
+batch_delete()
+
 print(subprocess.getoutput(restart_con))
 time.sleep(5)
 while True:
