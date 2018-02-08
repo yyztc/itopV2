@@ -1,0 +1,1 @@
+python3 merge_csv.py && python3 trans_to_dump.py && python3 start_import.py

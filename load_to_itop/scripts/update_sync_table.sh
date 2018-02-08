@@ -1,0 +1,1 @@
+mysql -uadmin -paZet4wYrJZib -h127.0.0.1 -P3319 itop -e "update priv_sync_att_extkey set reconciliation_attcode='name';commit;"
