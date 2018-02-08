@@ -2,3 +2,4 @@ extract_to_csv/config.ini
 load_to_itop/scripts/config.py
 load_to_itop/csvfile
 load_to_itop/csvfile/*.csv
+load_to_itop/scripts/*.pyc
