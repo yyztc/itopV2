@@ -1,0 +1,1 @@
+python3 extract_vc.py --host vc06 && python3 extract_vc.py --host vc02 && python3 extract_vc.py --host ppvc06
